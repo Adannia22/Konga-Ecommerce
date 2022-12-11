@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="liveAlertPlaceholder"></div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><i class="fa-solid fa-cart-shopping px-3"></i>Konga</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-grow-1">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Fashion wears</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">IT Gadgets</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Household Items</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+            </ul>
+            
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button  id="peace" class="btn btn-outline-success" type="submit"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            </form>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item px-2" data-bs-toggle="modal" data-bs-target="#exampleModallogin">
+              <i class="fa-solid fa-user nav-link pb-0"></i>
+                <p>Log In</p>
+              </li>
+              <li class="nav-item px-2" data-bs-toggle="modal" data-bs-target="#exampleModalsignup">
+                <i class="fa-solid fa-user-plus nav-link pb-0"></i>
+                <p>Sign Up</p>
+              </li>
+                </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="clothing3.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Men and Women Wears</h5>
+              <p>Whether it's summer or winter, we have the clothing to suit your style.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="electronics2.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>IT Gadgets</h5>
+              <p>We sell the most famous and renowned brands of phones, laptops and other digital accessories.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="furniture1.jpeg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Household/Office Furniture</h5>
+              <p>If you are looking for comfy,classic and modern furniture, then you have come to the right place.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+  
+<!-- Modal for Log In -->
+<div class="modal fade" id="exampleModallogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Log in to your account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Save log in details</label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Log In</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Sign Up -->
+<div class="modal fade" id="exampleModalsignup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Create An Account</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body formy">
+        <label for="name">First Name</label>
+        <input type="text" class="form-control" id="name">
+
+        <label for="surname">Last Name</label>
+        <input type="text" class="form-control" id="surname">
+
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email">
+
+        <label for="name">Phone Number</label>
+        <input type="text" class="form-control" id="name">
+
+        <div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword6" class="col-form-label">Password</label>
+    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    <span id="passwordHelpInline" class="form-text">
+      Must be 8-20 characters long.
+    </span>
+  </div>
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="form-control" data-bs-dismiss="modal">Create Account</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Products-->
+<div class="container text-center">
+  <h2>Products</h2>
+  <div class="row">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="furniture2.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Mouka Extra Leather Sofa</h5>
+          <h5>$1050</h5>
+          <a href="#" class="btn btn-primary">See more</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Hp Elitebook</h5>
+          <h5>$2700</h5>
+          <a href="#" class="btn btn-primary">See more</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+        <img src="clothing2.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Madem Polo Shirts in different colours</h5>
+          <h5>$140 for one</h5>
+          <a href="#" class="btn btn-primary">See more</a>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+
+
+<!--Contact Us-->
+<div class="container text-center">
+  <h2>Contact Us</h2>
+  <div class="row">
+    <div class="col-6">
+      <h6>Location: </p></h6><p>Konwea Shopping Plaza
+      <h6>Phone Number: </p></h6><p>+234 9011302243
+      <h6>Email: </p></h6> <p>konga@gmail.com
+    </div>
+    <div class="col-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4306808207134!2d6.713717614928371!3d6.206784128485683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1043f393eff89ed5%3A0xbc041047c4ecc269!2sKonwea%20Shopping%20Plaza!5e0!3m2!1sen!2sng!4v1670176919292!5m2!1sen!2sng" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+  <h5>CONNECT WITH US</h5>
+  <div>
+  <button><a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a></button>
+   <button><a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a></button>
+    <button><a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a></button>
+    <button><a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a></button>
+
+  </div>
+  <hr class="dropdown-divider">
+  <p>Copyrights &copy 2022 Konga Limited</p>
+  
+
+</div>
+
+
+    <script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+crossorigin="anonymous"></script>
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
