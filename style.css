@@ -75,6 +75,9 @@ h6{
 .card{
     height: 360px;
 }
+.two{
+    display: none;
+}
 @media screen and (max-width: 550px){
     .form-control{
         width: 250px;
