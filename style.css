@@ -9,14 +9,14 @@ img{
     color: black;
 }
 #peace:hover{
-    color: blue !important;
+    color: blue;
 }
 .carousel-caption{
     background-color: #ada4a4bd;
     bottom: 7.25rem;
 }
 .form-control{
-    width: 400px !important;
+    width: 360px;
 }
 .formy label{
      margin: 10px 50px;
@@ -45,15 +45,20 @@ h6{
     height: 150px;
     background-color: rgba(8, 8, 8, 0.7);
     margin-top: 50px;
-    color: white;
-}
-#footer div{
-    display: flex;
-    width: 25%;
-    justify-content: space-around;
-    align-items: flex-end;
-    margin: 0 540px;
     padding: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#social{
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    padding: 10px;
+}
+.dropdown-divider{
+    width: 100%;
 }
 #footer button{
     border: none;
@@ -68,5 +73,27 @@ h6{
     margin-bottom: 10px;
 }
 .card{
-    height: 360px !important;
+    height: 360px;
+}
+@media screen and (max-width: 550px){
+    .form-control{
+        width: 250px;
+    }
+    .me-2{
+        width: 250px !important;
+    }
+    .carousel-inner{
+        height: 420px;
+        background-size: cover;
+    }
+    .card{
+         margin: 0 30px ;
+       margin-bottom: 20px;
+    }
+    .one{
+        display: none;
+    }
+    #social{
+        width: 60%;
+    }
 }
